@@ -9,17 +9,16 @@ const HeroSection = () => {
     return genres[Math.floor(Math.random() * genres.length)]
   }
 
-  const fetchData = async () => {
-    const response = await fetch("/.netlify/functions/getMovies", {
-      method: "POST",
-      body: JSON.stringify({ genre: randomGenre(), pageState: pageState }),
-    })
-    const responseBody = await response.json()
-    const movies = responseBody.data.movies_by_genre.values
-    setMovie(movies[Math.floor(Math.random() * movies.length)])
-  }
-
   useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch("/.netlify/functions/getMovies", {
+        method: "POST",
+        body: JSON.stringify({ genre: randomGenre(), pageState: pageState }),
+      })
+      const responseBody = await response.json()
+      const movies = responseBody.data.movies_by_genre.values
+      setMovie(movies[Math.floor(Math.random() * movies.length)])
+    }
     fetchData()
   }, [])
 
