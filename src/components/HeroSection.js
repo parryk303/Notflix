@@ -4,10 +4,15 @@ const HeroSection = () => {
   const [movie, setMovie] = useState(null)
   const pageState = null
 
+  const randomGenre = () => {
+    const genres = [ "Action", "Anime", "Award-Winning", "Children & Family", "Comedies", "Documentaries", "Dramas", "Fantasy", "French", "Horror", "Independent", "Music & Musicals", "Romance", "Sci-Fi",  "Thriller" ]
+    return genres[Math.floor(Math.random() * genres.length)]
+  }
+
   const fetchData = async () => {
     const response = await fetch("/.netlify/functions/getMovies", {
       method: "POST",
-      body: JSON.stringify({ genre: "Sci-Fi", pageState: pageState }),
+      body: JSON.stringify({ genre: randomGenre(), pageState: pageState }),
     })
     const responseBody = await response.json()
     const movies = responseBody.data.movies_by_genre.values
