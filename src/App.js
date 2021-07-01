@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection"
 
 
 const App = () => {
-  const genreIncrement = 7
+  const genreIncrement = 15
   const [genres, setGenres] = useState(null)
   const [limit, setLimit] = useState(genreIncrement)
 

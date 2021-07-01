@@ -10,8 +10,8 @@ body {
 
 .navbar {
   height: 200px;
-  width: 100%;
-  margin-bottom: 10%;
+  width: 1500px;
+  margin-bottom: 70%;
 }
 
 .hero {
@@ -22,8 +22,8 @@ body {
 
 .info-section {
   position: absolute;
-  margin-top: 30%;
-  margin-left: 50px;
+  margin-top: 3.5%;
+  margin-left: 150px;
   width: 600px;
 }
 

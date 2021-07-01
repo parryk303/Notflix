@@ -6,7 +6,7 @@ const HeroSection = () => {
   const pageState = null
 
   const randomGenre = () => {
-    const genres = [ "Action", "Anime", "Award-Winning", "Children & Family", "Comedies", "Documentaries", "Dramas", "Fantasy", "French", "Horror", "Independent", "Music & Musicals", "Romance", "Sci-Fi",  "Thriller" ]
+    const genres = ["Action", "Anime", "Award-Winning", "Children & Family", "Comedies", "Documentaries", "Dramas", "Fantasy", "French", "Horror", "Independent", "Music & Musicals", "Romance", "Sci-Fi", "Thriller"]
     return genres[Math.floor(Math.random() * genres.length)]
   }
 
@@ -30,9 +30,6 @@ const HeroSection = () => {
           <video className="hero-video" muted controls autoPlay={true} loop>
             <source src={movie.thumbnail} type="video/mp4" />
           </video>
-
-
-
           <div className="info-section">
             <NavBar />
             <h3 className="hero-blurb">{movie.synopsis}</h3>

@@ -12,7 +12,7 @@ const initScroll = (elementId) => {
   if (marginY >= destination) {
     clearTimeout(scroller)
   }
-  window.scroll(0, marginY)
+  window.scroll(0, (marginY - 35))
 }
 
 const NavBar = () => {
@@ -30,14 +30,15 @@ const NavBar = () => {
           <a onClick={() => initScroll('Comedies')} href="#Comedies"> Comedies · </a>
           <a onClick={() => initScroll('Documentaries')} href="#Documentaries"> Documentaries · </a>
           <a onClick={() => initScroll('Dramas')} href="#Dramas"> Dramas</a>
-          {/* <a onClick={() => initScroll('Fantasy')} href="#Fantasy"> Fantasy · </a>
+          <br></br>
+          <a onClick={() => initScroll('Fantasy')} href="#Fantasy"> Fantasy · </a>
           <a onClick={() => initScroll('French')} href="#French"> French · </a>
           <a onClick={() => initScroll('Horror')} href="#Horror"> Horror · </a>
           <a onClick={() => initScroll('Independent')} href="#Independent"> Independent · </a>
           <a onClick={() => initScroll('Music & Musicals')} href="#Music & Musicals"> Music & Musicals · </a>
           <a onClick={() => initScroll('Romance')} href="#Romance"> Romance · </a>
           <a onClick={() => initScroll('Sci-Fi')} href="#Sci-Fi"> Sci-Fi · </a>
-          <a onClick={() => initScroll('Thriller')} href="#Thriller"> Thriller </a> */}
+          <a onClick={() => initScroll('Thriller')} href="#Thriller"> Thriller </a>
         </li>
       </ul>
     </div>
