@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import NavBar from "./NavBar.js"
 
 const HeroSection = () => {
   const [movie, setMovie] = useState(null)
@@ -30,7 +31,10 @@ const HeroSection = () => {
             <source src={movie.thumbnail} type="video/mp4" />
           </video>
 
+
+
           <div className="info-section">
+            <NavBar />
             <h3 className="hero-blurb">{movie.synopsis}</h3>
             <div className="button-section">
               <div className="button play">
