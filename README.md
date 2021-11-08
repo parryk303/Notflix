@@ -5,4 +5,9 @@ A simple ***ReactJS*** Netflix homepage clone running on ***AstraDB*** that leve
 ![image](./img/ui.png)
 
 ## Set Up Commands
+```
+npm i
+```
+```
 npm run dev
+```
